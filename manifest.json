@@ -1,0 +1,9 @@
+{
+  "id": "better-correct",
+  "name": "Better Correct",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Reduce false spellcheck warnings for technical language with AI-assisted dictionary adds.",
+  "author": "Nathanael Luke",
+  "isDesktopOnly": true
+}

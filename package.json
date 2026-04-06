@@ -1,0 +1,28 @@
+{
+  "name": "better-correct",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Obsidian desktop plugin that reduces false spellcheck warnings for technical terms.",
+  "scripts": {
+    "dev": "node esbuild.config.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "build": "node esbuild.config.mjs",
+    "check": "npm run typecheck && npm run build",
+    "verify-release": "node -e \"const fs=require('fs');const required=['manifest.json','main.js','styles.css'];for(const file of required){if(!fs.existsSync(file)){throw new Error('Missing release artifact: '+file);}}const manifest=JSON.parse(fs.readFileSync('manifest.json','utf8'));if(manifest.id!=='better-correct'){throw new Error('manifest.id must equal plugin folder name better-correct');}console.log('release layout ok');\"",
+    "release": "npm run check && npm run verify-release"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.30",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.25.3",
+    "obsidian": "^1.7.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@obsidian-ai-providers/sdk": "^1.5.0",
+    "codex": "^0.2.3",
+    "dictionary-en": "3.1.0",
+    "nspell": "^2.1.5"
+  }
+}
