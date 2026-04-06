@@ -1,0 +1,34 @@
+# Project-generated files
+data.json
+
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# Local scripts
+*.sh
+
+# Cache and temporary files
+.cache/
+.esbuild/
+*.tsbuildinfo
+
+# Editor settings
+.idea/
+.vscode/
+.codex
+
+# OS files
+.DS_Store
+Thumbs.db
+
